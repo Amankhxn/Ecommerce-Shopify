@@ -3,7 +3,7 @@ import React from 'react'
 const Signup = ({form , login , setLogin}) => {
     return (
         <div className='hero h-[700px] flex justify-center items-center  '>
-            <div className="login  w-[400px] h-[450px] p-4 bg-white flex flex-col gap-4 justify-center rounded shadow-2xl ">
+            <div className="login  w-[340px] h-[450px] p-4 bg-white flex flex-col gap-4 justify-center rounded shadow-2xl ">
                 <h1 className='text-4xl font-semibold mb-6'>SignUp</h1>
                 <div className="inputs flex flex-col gap-4">
                     <input type="text" placeholder='Enter you name...' value={form.name} onChange={(e) => setForm(prev => ({ ...prev, name: e.target.value }))} className='inp' />

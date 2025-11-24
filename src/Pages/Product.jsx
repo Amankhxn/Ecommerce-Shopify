@@ -40,7 +40,7 @@ const Product = () => {
 
         <div className="leftProduct flex flex-col-reverse sm:flex-row gap-2 w-full lg:w-[50%] justify-center items-center ">
 
-          <div className="multipleImg flex sm:flex-col  gap-4 border w-full sm:w-[100px] md:w-[100px] px-4 justify-center ">
+          <div className="multipleImg flex sm:flex-col  gap-4  w-full sm:w-[100px] md:w-[100px] px-4 justify-center ">
             {[1, 2, 3, 4].map((_, i) => (
               <img
                 key={i}
