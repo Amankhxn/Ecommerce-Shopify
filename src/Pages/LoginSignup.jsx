@@ -16,7 +16,7 @@ const LoginSignup = () => {
   return (
     <>
       {
-        login === true ? <Login form={form} login={login} setLogin={setLogin} /> : <Signup form={form} login={login} setLogin={setLogin} />
+        login === true ? <Login form={form} login={login} setLogin={setLogin} setForm={setForm} /> : <Signup form={form} login={login} setLogin={setLogin}  setForm={setForm} />
       }
 
 

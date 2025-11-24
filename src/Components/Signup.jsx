@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Signup = ({form , login , setLogin}) => {
+const Signup = ({form , login , setLogin ,setForm}) => {
     return (
         <div className='hero h-[700px] flex justify-center items-center  '>
             <div className="login  w-[340px] h-[450px] p-4 bg-white flex flex-col gap-4 justify-center rounded shadow-2xl ">
