@@ -28,6 +28,7 @@ const Product = () => {
 
   const relatedCard = relatedCollections[selectedProduct.category] || [];
 
+
   return (
 
 
@@ -76,7 +77,7 @@ const Product = () => {
           </div>
 
           <p className='text-gray-600'>
-           {selectedProduct.description_short}
+            {selectedProduct.description_short}
           </p>
 
           <div>
@@ -119,28 +120,28 @@ const Product = () => {
 
       {isActive === "description" ? (
         <p className='text-gray-500 p-3'>
-       {selectedProduct.description_long}
+          {selectedProduct.description_long}
         </p>
       ) : (
-        <ReviewTab review_count = {selectedProduct.review_count} />
+        <ReviewTab review_count={selectedProduct.review_count} />
       )}
 
       <div className="relatedProducts">
         <h1 className='text-3xl font-bold text-center'>Related Products</h1>
         <div className="popularUnderline mx-auto h-1.5 w-[180px] bg-black rounded-full mt-3" />
 
-         <div className="PopularCards  flex flex-wrap justify-center items-center">
+        <div className="PopularCards  flex flex-wrap justify-center items-center">
 
-                {data_product.map((item, index) => (
-                    <Link
-                        key={index}
-                        to={`/product/${item.id}`}
-                    >
-                        <Card item={item} />
-                    </Link>
-                ))}
+          {relatedCard.map((item, index) => (
+            <Link
+              key={index}
+              to={`/product/${item.id}`}
+            >
+              <Card item={item} />
+            </Link>
+          ))}
 
-            </div>
+        </div>
       </div>
 
     </div>
