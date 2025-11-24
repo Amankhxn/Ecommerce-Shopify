@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.spaceMaker {
+    width: 80%;
+    margin: auto;
+}
+
+.middleNav hr {
+    background: red;
+    border: none;
+    height: 2px;
+    border-radius: 21px;
+}
+
+.cartCounter {
+    background: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.hero {
+    background: linear-gradient(180deg, #F9DFF9 0%, #FFFFFF 100%);
+}
+
+.popular{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+button.newLetterBtn {
+    background: black;
+    color: white;
+    padding: 11px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+input.newletterField {
+    border: 1px solid black;
+    padding: 10px 24px;
+    border-radius: 24px;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input.inp {
+    width: 100%;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.productAngle {
+    border-radius: 8px;
+    width: 100px;
+}
+.multipleImg img {
+  min-width: 65px;
+}
+
+img.mainProduct {
+    height: 480px;
+    border-radius: 8px;
+}
+
+.size {
+    border: 1px solid gray;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #f4f3f3;
+    cursor: pointer;
+}
+
+button.cartBtn {
+    background: red;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer{
+    margin-top: 10px;
+}
