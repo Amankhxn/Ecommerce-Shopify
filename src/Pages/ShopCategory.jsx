@@ -32,7 +32,7 @@ const ShopCategory = ({ category, banner }) => {
           </div>
         </div>
 
-        <div className="ProductCards border flex flex-wrap justify-evenly items-center ">
+        <div className="ProductCards  flex flex-wrap justify-evenly items-center ">
           {
             productFilter.map((item) => {
               if (category === item.category) {
