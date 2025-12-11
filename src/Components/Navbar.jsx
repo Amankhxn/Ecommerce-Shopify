@@ -64,11 +64,11 @@ const Navbar = () => {
                         <div className="LoginCart flex items-center gap-6 ">
                             {
                                 user ? <button className='border px-4 py-2 rounded cursor-pointer' onClick={logout}> Logout </button> :
-                                    <NavLink to={'/loginsignup'}>     <button className='border px-4 py-2 rounded cursor-pointer '>Login</button>  </NavLink>
+                                    <NavLink to={'/loginsignup'}>     <button className='border px-4 py-2 rounded cursor-pointer bg-red-500 text-white'>Login</button>  </NavLink>
                             }
 
 
-                            <div className="cart relative">
+                            <div className="cart relative"> 
                                 <NavLink to={"/cart"}>
 
                                     <div className="cartCounter absolute top-[-40%] right-[-50%]">{count}</div>
