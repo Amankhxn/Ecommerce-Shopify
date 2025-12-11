@@ -9,7 +9,7 @@ import { IoClose } from "react-icons/io5";
 const Navbar = () => {
     const [activePage, setActivePage] = useState("shop");
     const [isOpen, setIsOpen] = useState(false);
-    const { count } = useContext(ShopContext);
+    const { count, logout, user } = useContext(ShopContext);
     return (
         <nav className='navbar  bg-blue-50  '>
             <div className='spaceMaker flex justify-between items-center py-2'>
@@ -34,14 +34,14 @@ const Navbar = () => {
                 <div className="rightNav hidden lg:flex items-center gap-6">
 
 
-                    <NavLink to={'/loginsignup'}>
-                        <button className='border px-4 py-2 rounded cursor-pointer '>Login</button>
-                    </NavLink>
 
+                    {
+                        user ? <button className='border px-4 py-2 rounded cursor-pointer' onClick={logout}> Logout </button> :
+                            <NavLink to={'/loginsignup'}>     <button className='border px-4 py-2 rounded cursor-pointer '>Login</button>  </NavLink>
+                    }
 
                     <div className="cart relative">
                         <NavLink to={"/cart"}>
-
                             <div className="cartCounter absolute top-[-40%] right-[-50%]">{count}</div>
                             <FaShoppingCart size={25} />
                         </NavLink>

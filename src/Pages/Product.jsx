@@ -9,6 +9,7 @@ import Card from '../Components/Card';
 import data_product from '../assets/data';
 import { kidRelated, menRelated, womenRelated } from '../assets/related_products';
 import { ShopContext } from '../Context/ShopContext';
+import { toast } from 'react-toastify';
 
 const Product = () => {
   const { id } = useParams();
@@ -93,7 +94,7 @@ const Product = () => {
 
           <button
             className='cartBtn bg-[#F53E3F] hover:bg-[#d53232] text-white py-3 rounded-md w-full sm:w-[250px] font-semibold transition'
-            onClick={() => addToCart(selectedProduct)}
+            onClick={() => {addToCart(selectedProduct) ; toast.success("Item Added to Cart") }}
           >
             ADD TO CART
           </button>

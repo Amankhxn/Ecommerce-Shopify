@@ -4,6 +4,13 @@ import handICon from "../assets/hand_icon.png"
 import heroPage from "../assets/hero_image.png"
 
 const Hero = () => {
+
+    const scrollToSection = (id) => {
+        document.querySelector(id)?.scrollIntoView({
+            behavior : "smooth" 
+        })
+    }   
+
     return (
       
 
@@ -23,8 +30,8 @@ const Hero = () => {
                         <p className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl  font-bold">Collection</p>
                         <p className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl  font-bold">For Everyone</p>
 
-                        <button className='bg-[#F53E3F] flex justify-center items-center w-[250px]  sm:w-[250px] gap-2 mt-6 text-lg sm:text-xl px-4 py-2 rounded-full text-white cursor-pointer mx-auto md:mx-0'>
-                            Latest Collection <FaLongArrowAltRight />
+                        <button className='bg-[#F53E3F] flex justify-center items-center w-[250px]  sm:w-[250px] gap-2 mt-6 text-lg sm:text-xl px-4 py-2 rounded-full text-white cursor-pointer mx-auto md:mx-0' onClick={() => scrollToSection("#collections")}>
+                            Latest Collection <FaLongArrowAltRight /> 
                         </button>
                     </div>
 

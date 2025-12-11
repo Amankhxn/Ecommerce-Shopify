@@ -8,7 +8,8 @@ import Cart from "./Pages/Cart";
 import menBanner from "./assets/banner_mens.png";
 import womenBanner from "./assets/banner_women.png";
 import kidsBanner from './assets/banner_kids.png'
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 
@@ -33,6 +34,15 @@ function App() {
     <>
 
       <RouterProvider router={router}></RouterProvider>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="light"
+      ></ToastContainer>
     </>
   )
 }

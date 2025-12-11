@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const NewCollection = () => {
     return (
-        <div>
+        <div id='collections'>
             <div className='relative spaceMaker popular '>
                 <h1 className='text-3xl  md:text-4xl lg:text-5xl font-bold text-center'>New Collections</h1>
 
