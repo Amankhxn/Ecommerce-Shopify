@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import React from 'react'
 import { auth , db } from '../Context/firebase';
 import {doc , setDoc} from "firebase/firestore";
+import { toast } from 'react-toastify';
 
 const Signup = ({ form, login, setLogin, setForm }) => {
 
@@ -9,7 +10,7 @@ const Signup = ({ form, login, setLogin, setForm }) => {
         const { email, password, name } = form;
 
         if (!email || !password || !name) {
-            return alert("fill all the fields");
+            return toast.warning('Fill all the Fields')
         }
         try {
             const userCredentials = await createUserWithEmailAndPassword(auth, email, password)

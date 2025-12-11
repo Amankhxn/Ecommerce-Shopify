@@ -37,7 +37,7 @@ const Navbar = () => {
 
                     {
                         user ? <button className='border px-4 py-2 rounded cursor-pointer' onClick={logout}> Logout </button> :
-                            <NavLink to={'/loginsignup'}>     <button className='border px-4 py-2 rounded cursor-pointer '>Login</button>  </NavLink>
+                            <NavLink to={'/loginsignup'}>     <button className='border px-4 py-2 rounded cursor-pointer bg-red-500 text-white '>Login</button>  </NavLink>
                     }
 
                     <div className="cart relative">
@@ -62,9 +62,10 @@ const Navbar = () => {
                             <IoClose size={30} onClick={() => setIsOpen(false)} />
                         </div>
                         <div className="LoginCart flex items-center gap-6 ">
-                            <NavLink to={'/loginsignup'}>
-                                <button className='border px-4 py-2 rounded cursor-pointer '>Login</button>
-                            </NavLink>
+                            {
+                                user ? <button className='border px-4 py-2 rounded cursor-pointer' onClick={logout}> Logout </button> :
+                                    <NavLink to={'/loginsignup'}>     <button className='border px-4 py-2 rounded cursor-pointer '>Login</button>  </NavLink>
+                            }
 
 
                             <div className="cart relative">
