@@ -48,27 +48,22 @@ const Cart = () => {
         "
           >
 
-            {/* Image + Remove for card mode */}
             <div className="flex justify-between  md:block">
               <img
                 src={item.image}
                 className="w-20 h-24 object-cover rounded"
                 alt="product"
               />
-              {/* remove — mobile right corner */}
               <FaTimes
                 className="md:hidden text-gray-500 hover:text-red-500 cursor-pointer"
                 onClick={() => removeItem(item.id)}
               />
             </div>
 
-            {/* Title */}
             <p className="font-medium text-gray-600 mt-2 md:mt-0">{item.name}</p>
 
-            {/* Price */}
             <p className="font-semibold text-gray-800">₹{item.new_price}</p>
 
-            {/* Quantity */}
             <div className="my-2 md:my-0">
               <input
                 type="number"
@@ -78,10 +73,8 @@ const Cart = () => {
               />
             </div>
 
-            {/* Total */}
             <p className="font-bold text-gray-900">₹{item.quantity * item.new_price}</p>
 
-            {/* remove button desktop */}
             <div className="hidden md:block cursor-pointer text-gray-500 hover:text-red-500">
               <FaTimes onClick={() => removeItem(item.id)} />
             </div>

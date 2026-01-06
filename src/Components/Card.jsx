@@ -5,7 +5,7 @@ const Card = ({ item }) => {
 
     const { name, image, new_price, old_price } = item
     return (
-        <div className=' w-[285px]  flex  justify-center items-center  flex-col gap-4 cursor-pointer  p-2  ' >
+        <div className=' w-[285px] hover:shadow hover:shadow-red-400 rounded-2xl flex  justify-center items-center  flex-col gap-4 cursor-pointer  p-2  ' >
 
             <img src={image} alt="" className='bg-cover w-full rounded' onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} />
 

@@ -10,12 +10,26 @@ import data_product from '../assets/data';
 import { kidRelated, menRelated, womenRelated } from '../assets/related_products';
 import { ShopContext } from '../Context/ShopContext';
 import { toast } from 'react-toastify';
+import mp1 from '../assets/Product men 1.0.jpg'
+import mp2 from '../assets/Product men 1.1.jpg'
+import mp3 from '../assets/Product men 1.2.jpg'
+import mp4 from '../assets/Product men 1.3.jpg'
+import mp5 from '../assets/Product men 1.4.jpg'
 
 const Product = () => {
   const { id } = useParams();
   const [isActive, setIsActive] = useState("description");
   const selectedProduct = all_product.find((product) => product.id === Number(id))
   const { addToCart } = useContext(ShopContext);
+
+  // const productImage = [{
+  //   mainProduct : mp1,
+  //   secondAngle : mp2,
+  //   thirdAngle : mp3 , 
+  //   lastAngle : mp4
+  // }]
+
+  const productImage = [mp1, mp2, mp3, mp4,mp5];
 
   if (!selectedProduct) {
     return <h1>No such Product...</h1>
@@ -40,23 +54,30 @@ const Product = () => {
       <div className="Product flex flex-col lg:flex-row gap-10 lg:gap-8  ">
 
 
-        <div className="leftProduct flex flex-col-reverse sm:flex-row gap-2 w-full lg:w-[50%] justify-center items-center ">
+        <div className="leftProduct flex max-[460px]:flex-col-reverse sm:flex-row gap-2 w-full lg:w-[50%] justify-center items-center ">
 
-          <div className="multipleImg flex sm:flex-col  gap-4  w-full sm:w-[100px] md:w-[100px] px-4 justify-center ">
-            {[1, 2, 3, 4].map((_, i) => (
-              <img
-                key={i}
-                src={selectedProduct.image}
-                alt="thumb"
-                className='productAngle h-[90px] sm:h-[107px] lg:h-[92px] flex-wrap  object-cover cursor-pointer rounded'
-              />
+          <div className="multipleImg flex  max-[460px]:flex max-[460px]:flex-row  flex-col  min-w-[100px]    sm:flex-col  gap-4  sm:w-[100px] md:w-[100px] px-4 justify-center ">
+            {productImage.map((img, i) => (
+              <>
+                <div className="w-full h-full shadow shadow-red-300 rounded-lg  overflow-hidden">
+
+                  <img
+                    key={i}
+                    src={selectedProduct.image}
+                    alt="thumb"
+                    className='productAngle object-cover w-full h-full cursor-pointer rounded-2xl  min-[460px]:h-[70px] min-[460px]:w-[1000px] sm:h-[107px] lg:h-[92px] flex-wrap  '
+                  />
+
+                </div>
+
+              </>
             ))}
           </div>
 
           <img
             src={selectedProduct.image}
             alt="main product"
-            className='mainProduct  h-[350px] sm:h-[480px]  lg:w-[350px] object-contain rounded'
+            className='mainProduct  h-[310px]  bg-center   min-[460px]:h-[410px] sm:h-[600px] md:h-[600px]  lg:h-[520px]  '
           />
         </div>
 
@@ -81,20 +102,10 @@ const Product = () => {
             {selectedProduct.description_short}
           </p>
 
-          <div>
-            <p className='text-xl font-semibold'>Select Size</p>
-            <div className="sizes flex flex-wrap gap-3 sm:gap-5 mt-2">
-              {["M", "L", "XL", "XXL", "S"].map((size, i) => (
-                <div key={i} className='size w-[45px] h-[45px] flex justify-center items-center border rounded cursor-pointer'>
-                  {size}
-                </div>
-              ))}
-            </div>
-          </div>
 
           <button
             className='cartBtn bg-[#F53E3F] hover:bg-[#d53232] text-white py-3 rounded-md w-full sm:w-[250px] font-semibold transition'
-            onClick={() => {addToCart(selectedProduct) ; toast.success("Item Added to Cart") }}
+            onClick={() => { addToCart(selectedProduct); toast.success("Item Added to Cart") }}
           >
             ADD TO CART
           </button>

@@ -73,7 +73,7 @@ input.inp {
     width: 100px;
 }
 .multipleImg img {
-  min-width: 65px;
+    /* border-radius: 10px !important; */
 }
 
 img.mainProduct {
